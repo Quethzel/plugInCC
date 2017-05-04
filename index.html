@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PlugIn CC</title>
+    <style type="text/css">
+    body {
+        padding: 10px;
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="plugInCC.css">
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="plugInCC.js"></script>
+</head>
+<body>
+    <div class="row col-md-10 col-sm-10">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-md-3">Destinatario</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" ng-model="email.destinatario" autofocus>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">CC</label>
+                <div class="col-md-9">
+                    <div class="qtag-cc" id="cc_tags">
+                        <input type="text" ng-model="email.cc" placeholder="user@email.com">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Asunto</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" ng-model="email.asunto">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Mensaje</label>
+                <div class="col-md-9">
+                    <textarea class="form-control" row="6" style="min-height:85px;" ng-model="email.mensaje"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Datos Adjuntos</label>
+                <div class="col-md-9">
+                    <div class="input-icon">
+                        <i class="fa fa-paperclip"></i>
+                        <input type="text" class="form-control" ng-model="email.pdf" placeholder="documento.pdf" readonly>
+                    </div>
+                </div>
+                <div class="col-md-offset-3 col-md-9">
+                    <div class="input-icon">
+                        <i class="fa fa-paperclip"></i>
+                        <input type="text" class="form-control" ng-model="email.xml" placeholder="documento.xml" readonly>
+                    </div>
+                </div>                        
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-3 col-md-9">
+                    <input type="hidden" ng-model="email.factura"> 
+                    <button type="button" class="btn btn-success" ng-disabled="isDisabled" ng-click="EnviarEmail(email.factura)">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
