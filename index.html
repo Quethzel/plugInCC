@@ -21,27 +21,25 @@
             <div class="form-group">
                 <label class="control-label col-md-3">Destinatario</label>
                 <div class="col-md-9">
-                    <input type="text" class="form-control" ng-model="email.destinatario" autofocus>
+                    <input type="text" class="form-control" autofocus>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-md-3">CC</label>
                 <div class="col-md-9">
-                    <div class="qtag-cc" id="cc_tags">
-                        <input type="text" ng-model="email.cc" placeholder="user@email.com">
-                    </div>
+                    <div class="qtag-cc"></div>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-md-3">Asunto</label>
                 <div class="col-md-9">
-                    <input type="text" class="form-control" ng-model="email.asunto">
+                    <input type="text" class="form-control">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-md-3">Mensaje</label>
                 <div class="col-md-9">
-                    <textarea class="form-control" row="6" style="min-height:85px;" ng-model="email.mensaje"></textarea>
+                    <textarea class="form-control" row="6" style="min-height:85px;"></textarea>
                 </div>
             </div>
             <div class="form-group">
@@ -49,20 +47,19 @@
                 <div class="col-md-9">
                     <div class="input-icon">
                         <i class="fa fa-paperclip"></i>
-                        <input type="text" class="form-control" ng-model="email.pdf" placeholder="documento.pdf" readonly>
+                        <input type="text" class="form-control" placeholder="documento.pdf" readonly>
                     </div>
                 </div>
                 <div class="col-md-offset-3 col-md-9">
                     <div class="input-icon">
                         <i class="fa fa-paperclip"></i>
-                        <input type="text" class="form-control" ng-model="email.xml" placeholder="documento.xml" readonly>
+                        <input type="text" class="form-control" placeholder="documento.xml" readonly>
                     </div>
                 </div>                        
             </div>
             <div class="form-group">
                 <div class="col-md-offset-3 col-md-9">
-                    <input type="hidden" ng-model="email.factura"> 
-                    <button type="button" class="btn btn-success" ng-disabled="isDisabled" ng-click="EnviarEmail(email.factura)">Enviar</button>
+                    <button type="button" class="btn btn-success">Enviar</button>
                 </div>
             </div>
         </form>

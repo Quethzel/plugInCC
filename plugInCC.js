@@ -1,11 +1,15 @@
 /*
- * Project: hobby
- * Desc:	PlugIn para generar etiquetas CC etilo outlook
+ * Project: tagCC v1.00.00.00
+ * Desc:	PlugIn para generar etiquetas CC estilo Outlook
  * Author: 	H.Quethzel Díaz Zárate
- * Contact: quethzel@gmail.com
- * Date: 	30.04.2017
+ * Contact: quethzel@gmail.com, www.iamquethzel.com
+  * Date: 	04.05.2017
 */
 (function($) {
+	$.fn.ini = function() {
+		$("div.qtag-cc").append("<input type=\"text\" placeholder=\"user@email.com\" />");
+	};
+
 	$.fn.tagCC = function() {
 		$(this).on({
 			focusout: function() {
@@ -16,7 +20,7 @@
 				if([";", ",", " "].indexOf(last_char) + 1) {
 					text = text.slice(0, text.length -1);
 				}
-				// valida el email mediante regex y agrega/quita las clases correspondientes
+
 				if(emailRegex.test(text)) {
 					$("<span>", {
 						text: text.toLowerCase() + ";",
@@ -33,7 +37,7 @@
 				if (/(188|13|32)/.test(ev.which)) $(this).focusout();
 			}
 		});
-		// evento que se dispara cuando se presiona el "x" de algun span.
+
 		$(".qtag-cc").on('click', 'span', function() {
 			$(this).remove();
 		});
@@ -46,8 +50,10 @@
 	$.fn.cleanTags = function() {
 		$(this).find("span").remove();
 	};
-
 }(jQuery));
 
 // Inicializa el plugIn
-$("#cc_tags").find("input").tagCC();
+$(document).ready(function() {
+	$('div.qtag-cc').ini();
+	$('div.qtag-cc').find("input").tagCC();
+});

@@ -1,43 +1,42 @@
 /*
- * Project: hobby
- * Desc:	PlugIn para generar etiquetas CC etilo outlook
- * Author: 	H.Quethzel Díaz Zárate
- * Contact: quethzel@gmail.com
- * Date: 	30.04.2017
+ * Project: tagCC v1.00.00.00
+ * Desc:  PlugIn para generar etiquetas CC estilo Outlook
+ * Author:  H.Quethzel Díaz Zárate
+ * Contact: quethzel@gmail.com, www.iamquethzel.com
+  * Date:   04.05.2017
 */
 .qtag-cc {
-    float:left;
-    border:1px solid #ccc;
-    padding:5px;
+    float: left;
+    border: 1px solid #CCC;
+    padding: 5px;
     width: 100%;
 }
-.qtag-cc-error {
-  border: 1.7px solid #FF0000 !important;
-}
-.qtag-cc > span{
-  cursor:pointer;
-  display:block;
-  float:left;
-  color:#777;
-  border: 1px solid #E5E5E5;
-  padding:5px;
-  padding-right:25px;
-  margin:2px;
-}
-.qtag-cc > span:hover{
-  opacity:0.8;
-}
-.qtag-cc > span:after{
- position:absolute;
- top: 12px;
- content:"×";
- padding:2px 5px;
- margin-left:3px;
- font-size:12px;
-}
-.qtag-cc > input{
+.qtag-cc > input {
     height: 34px;
     padding: 6px 12px;
     width:auto;
     border: 0;
+}
+.qtag-cc > span {
+  cursor: pointer;
+  display: block;
+  float: left;
+  color: #777;
+  border:  1px solid #E5E5E5;
+  padding: 5px;
+  padding-right: 25px;
+  margin: 2px;
+}
+.qtag-cc > span :hover {
+  opacity:0.8;
+}
+.qtag-cc > span :after {
+ position:absolute;
+ top: 12px;
+ padding:2px 5px;
+ margin-left:3px;
+ font-size:12px;
+}
+.qtag-cc-error {
+  border: 1.7px solid #FF0000 !important;
 }
